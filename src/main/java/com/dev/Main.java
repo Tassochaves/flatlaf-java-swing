@@ -13,7 +13,7 @@ public class Main {
         FlatRobotoFont.install();
         FlatLaf.registerCustomDefaultsSource("login.themes");
         FlatLightLaf.setup();
-        UIManager.put("defaultFont", new Font(FlatRobotoFont.FAMILY, Font.PLAIN, 13));
+        UIManager.put("defaultFont", new Font(FlatRobotoFont.FAMILY, Font.PLAIN, 15));
         EventQueue.invokeLater(() -> new Login().setVisible(true));
 
     }

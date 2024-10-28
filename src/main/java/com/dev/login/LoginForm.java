@@ -12,9 +12,9 @@ public class LoginForm extends JPanel{
     }
 
     private void iniciar() {
-        setLayout(new MigLayout("wrap,gapy 3", "[fill,300]"));
+        setLayout(new MigLayout("wrap,gapy 3", "[fill,200]"));
 
-        add(new JLabel(new FlatSVGIcon("login/icon/logo.svg", 1.5f)));
+        add(new JLabel(new FlatSVGIcon("login/icon/LogoOAB.svg", 0.3f)));
 
         JLabel lbTitle = new JLabel("Bem vindo (a)", JLabel.CENTER);
         lbTitle.putClientProperty(FlatClientProperties.STYLE, "" +
@@ -35,7 +35,7 @@ public class LoginForm extends JPanel{
         add(lbSeparator, "sizegroup g1");
         add(createSeparator(), "sizegroup g1");
 
-        JLabel lbIOab = new JLabel("Inscrição OAB");
+        JLabel lbIOab = new JLabel("Número da OAB");
         lbIOab.putClientProperty(FlatClientProperties.STYLE, "" +
                 "font:bold;");
         add(lbIOab, "gapy 10 5");
@@ -43,7 +43,7 @@ public class LoginForm extends JPanel{
         JTextField txtOab = new JTextField();
         txtOab.putClientProperty(FlatClientProperties.STYLE, "" +
                 "iconTextGap:10;");
-                txtOab.putClientProperty(FlatClientProperties.PLACEHOLDER_TEXT, "Entre com seu numero de inscrição");
+                txtOab.putClientProperty(FlatClientProperties.PLACEHOLDER_TEXT, "Entre com seu número da OAB");
                 txtOab.putClientProperty(FlatClientProperties.TEXT_FIELD_LEADING_ICON, new FlatSVGIcon("login/icon/email.svg", 0.35f));
 
         add(txtOab);
@@ -66,28 +66,28 @@ public class LoginForm extends JPanel{
         add(txtCpf);
         add(new JLabel(""), "gapy 10 10");
 
-        JButton cmdSignIn = new JButton("Acessar") {
+        JButton btnAcessar = new JButton("Acessar") {
             @Override
             public boolean isDefaultButton() {
                 return true;
             }
         };
         
-        cmdSignIn.putClientProperty(FlatClientProperties.STYLE, "" +
+        btnAcessar.putClientProperty(FlatClientProperties.STYLE, "" +
                 "foreground:#000000;" +
-                "font:bold +5;" +
+                "font:bold +3;" +
                 "iconTextGap:10;");
-        cmdSignIn.setHorizontalTextPosition(JButton.LEADING);
-        add(cmdSignIn, "gapy n 10");
+        btnAcessar.setHorizontalTextPosition(JButton.LEADING);
+        add(btnAcessar, "gapy n 10");
 
         add(new JLabel("Inscrição de outro estado?", JLabel.CENTER));
-        add(new JLabel("Clique no acesso externo:", JLabel.CENTER));
+        add(new JLabel("Clique no acesso externo", JLabel.CENTER));
         
-        JButton cmdFacebook2 = new JButton("Externo");
-        cmdFacebook2.putClientProperty(FlatClientProperties.STYLE, "" +
+        JButton btnExterno = new JButton("Externo");
+        btnExterno.putClientProperty(FlatClientProperties.STYLE, "" +
                 "focusWidth:0;" +
-                "font:+5;");
-        add(cmdFacebook2, "gapy 15 10");
+                "font:+3;");
+        add(btnExterno, "gapy 15 10");
     }
 
     private JSeparator createSeparator() {
