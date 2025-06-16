@@ -21,8 +21,8 @@ public class LoginForm extends JPanel{
                 "font:bold +20;");
         add(lbTitle, "gapy 8 8");
 
-        add(new JLabel("Entre para liberar o computador,", JLabel.CENTER));
-        add(new JLabel("setting and projects.", JLabel.CENTER));
+        add(new JLabel("Entre para liberar o computador", JLabel.CENTER));
+        
 
         JLabel lbSeparator = new JLabel("Insira suas informações");
         lbSeparator.putClientProperty(FlatClientProperties.STYLE, "" +
